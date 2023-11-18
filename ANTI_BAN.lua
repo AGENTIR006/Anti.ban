@@ -1,15 +1,3 @@
-local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
-local w = library:CreateWindow("ANTI BAN") 
-local b = w:CreateFolder("ANTI BAN")
-b:Label("x2Swiftz",{
-    TextSize = 25; 
-    TextColor = Color3.fromRGB(255,255,255); 
-    BgColor = Color3.fromRGB(69,69,69); 
-    
-}) 
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
 
-b:Toggle("Toggle",function(bool)
-    shared.toggle = bool
-    print(shared.toggle)
-end) 
-
+local w = Library:Window("Уневирсал анти бан")
