@@ -2,34 +2,21 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/blood
 
 local OwO = library:Window("Table Turtle Hub")
 
-OwO:Button("Button name", function()
-   print("pressed button")
-end)
-
-OwO:Toggle("Example toggle", true, function(bool)
+OwO:Toggle("1", true, function(bool)
     print(bool)
 end)
-
-OwO:ColorPicker("Color Picker", Color3.fromRGB(255, 255, 255), function(color)
-   print(color)
+OwO:Toggle("2", true, function(bool)
+    print(bool)
 end)
-
-OwO:Slider("Example Slider",0,100,20, function(value)
-   print(value)
+OwO:Toggle("3", true, function(bool)
+    print(bool)
 end)
-
-OwO:Label("Credits to Intrer#0421", Color3.fromRGB(127, 143, 166))
-
-OwO:Box("Walkspeed", function(text, focuslost)
-   if focuslost then
-   print(text)
-   end
+OwO:Toggle("4", true, function(bool)
+    print(bool)
 end)
-
-local dropdown = OwO:Dropdown("Example dropdown", {"Button 1", "Button 2", "Third button"}, function(name)
-   print(name)
+OwO:Toggle("5", true, function(bool)
+    print(bool)
 end)
-
-dropdown:Button("New button")
-
-dropdown:Remove("Button")
+OwO:Toggle("6", true, function(bool)
+    print(bool)
+end)
