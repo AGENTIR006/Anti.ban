@@ -3,13 +3,12 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/blood
 local w = Library:Window("Main")
 
 w:Button("1", function()
-      getgenv().credit = "HERE_CREDIT_NAME"
+      getgenv().credit = "0"
 
 
-if getgenv().credit == "HERE_CREDIT_NAME" then
+if getgenv().credit == "0" then
  print"script loaded"
 else
  game.Players.LocalPlayer:Kick("Credit Is LOI!, Dont Touch IT")
-      end
-   print("1")
+            end
 end)
