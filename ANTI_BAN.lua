@@ -7,15 +7,16 @@ b:Label("x2Swiftz",{
     BgColor = Color3.fromRGB(69,69,69); 
     
 }) 
+
 b:Toggle("Toggle",function(bool)
     shared.toggle = bool
     print(shared.toggle)
-    getgenv().credit = "HERE_CREDIT_NAME"
-
-
-if getgenv().credit == "HERE_CREDIT_NAME" then
+        if getgenv().credit == "HERE_CREDIT_NAME" then
  print"script loaded"
 else
  game.Players.LocalPlayer:Kick("Credit Is LOI!, Dont Touch IT")
     end
 end) 
+end)
+
+
