@@ -49,7 +49,7 @@ OwO:Toggle("3", true, function(bool)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/katrina367/ScriptBlox-Projects/main/Anti%20Chat%20Banner'))()(bool)
 end)
 OwO:Toggle("4", true, function(bool)
-   --Credit: StepBroFurious
+  
 local X;
 X = hookmetamethod(game, "__namecall", function(self, ...)
    if getnamecallmethod() == "Ban" then
@@ -91,8 +91,8 @@ X = hookmetamethod(game, "__namecall", function(self, ...)
                end
            end
            if eval2[1] then
-               game:GetService("NetworkClient"):SetOutgoingKBPSLimit(0, outgoingkey) --stops ban packets (requires outgoing key to set it to 0)
-               game.Players.LocalPlayer:Kick("Game attempted to ban you but was blocked") --kicked because it'll detect the namecall being blocked
+               game:GetService("NetworkClient"):SetOutgoingKBPSLimit(0, outgoingkey) 
+               game.Players.LocalPlayer:Kick("Game attempted to ban you but was blocked")
                return wait(9e9)
            end
        end
@@ -101,11 +101,10 @@ X = hookmetamethod(game, "__namecall", function(self, ...)
 end)(bool)
 end)
 OwO:Toggle("5", true, function(bool)
-    -- YOU NEED TO SET IT UP BELOW
-local pos = Vector3.new(0,0,0) -- your pos here
-local delay = 10 -- tp tween speed like how many seconds takes to tp
+    
+local pos = Vector3.new(0,0,0) 
+local delay = 10 
 
--- do not edit below cuz breaks script
 
 local tween_s = game:GetService('TweenService')
 local tweeninfo = TweenInfo.new(delay,Enum.EasingStyle.Linear)
