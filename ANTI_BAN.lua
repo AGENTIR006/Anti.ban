@@ -1,7 +1,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
 
-local w = Library:Window("Уневирсал анти бан")
-w:Toggle("Toggle", function(v)
+local w = Library:Window("Main")
+
+
+
+w:Toggle("1", function(v)
    getgenv().credit = "HERE_CREDIT_NAME"
 
 
@@ -9,9 +12,11 @@ if getgenv().credit == "HERE_CREDIT_NAME" then
  print"script loaded"
 else
  game.Players.LocalPlayer:Kick("Credit Is LOI!, Dont Touch IT")
-    end(v)
+      end(v)
 end)
-w:Toggle("Toggle", function(v)
+
+
+w:Toggle("2", function(v)
    assert(getrawmetatable)
 grm = getrawmetatable(game)
 setreadonly(grm, false)
@@ -44,11 +49,11 @@ grm.namecall = newcclosure(function(self, ...)
     return old(self, ...)
 end)(v)
 end)
-w:Toggle("Toggle", function(v)
+w:Toggle("3", function(v)
    loadstring(game:HttpGet('https://raw.githubusercontent.com/katrina367/ScriptBlox-Projects/main/Anti%20Chat%20Banner'))()(v)
 end)
-w:Toggle("Toggle", function(v)
-   --Credit: StepBroFurious
+
+w:Toggle("4", function(v)
 local X;
 X = hookmetamethod(game, "__namecall", function(self, ...)
    if getnamecallmethod() == "Ban" then
@@ -87,11 +92,13 @@ X = hookmetamethod(game, "__namecall", function(self, ...)
                    if counter == eval1[2] then
                        eval2 = {true, outgoingkey}
                    end
-               end
+                end
            end
+   print(v)
+end)
            if eval2[1] then
-               game:GetService("NetworkClient"):SetOutgoingKBPSLimit(0, outgoingkey) --stops ban packets (requires outgoing key to set it to 0)
-               game.Players.LocalPlayer:Kick("Game attempted to ban you but was blocked") --kicked because it'll detect the namecall being blocked
+               game:GetService("NetworkClient"):SetOutgoingKBPSLimit(0, outgoingkey) 
+               game.Players.LocalPlayer:Kick("Game attempted to ban you but was blocked") 
                return wait(9e9)
            end
        end
@@ -99,7 +106,9 @@ X = hookmetamethod(game, "__namecall", function(self, ...)
    return X(self, ...)
 end)(v)
 end)
-w:Toggle("Toggle", function(v)
+
+
+w:Toggle("5", function(v)
    -- YOU NEED TO SET IT UP BELOW
 local pos = Vector3.new(0,0,0) -- your pos here
 local delay = 10 -- tp tween speed like how many seconds takes to tp
@@ -115,12 +124,11 @@ if lp.Character and lp.Character:FindFirstChild('HumanoidRootPart') then
     local cf = CFrame.new(pos)
     local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
     a:Play()
-    end(v)
+end(v)
 end)
-w:Toggle("Toggle", function(v)
-   loadstring(game:HttpGet("https://pastebin.com/raw/TsVgzGf5", true))()(v)
-end)
-w:Toggle("Toggle", function(v)
+
+
+w:Toggle("6", function(v)
    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Anir Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
